@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YNe-yY-5CC">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="sYh-0Y-4FA">
+            <objects>
+                <navigationController storyboardIdentifier="RootNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YNe-yY-5CC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yYb-nT-tuw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2Zh-nD-mVx" kind="relationship" relationship="rootViewController" id="DQP-OY-0Aj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ppa-oe-EXh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="-524"/>
+        </scene>
+        <!--Gold-->
+        <scene sceneID="h0g-vg-kEh">
+            <objects>
+                <viewController storyboardIdentifier="GoldViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2Zh-nD-mVx" customClass="GoldViewController" customModule="iOS_102" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HuP-Ne-EH4"/>
+                        <viewControllerLayoutGuide type="bottom" id="thJ-PI-QZw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nPq-0e-ppr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXW-EW-Sag">
+                                <rect key="frame" x="262" y="285" width="77" height="30"/>
+                                <state key="normal" title="Go To Next">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="VE2-Rp-92X" kind="show" identifier="GoToYellow" id="q8U-9Y-wXY"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="textField" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YTn-lp-Bkz" userLabel="textField">
+                                <rect key="frame" x="16" y="235" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.72156862749999995" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="NXW-EW-Sag" firstAttribute="top" secondItem="YTn-lp-Bkz" secondAttribute="bottom" constant="20" id="4Dc-yO-AFx"/>
+                            <constraint firstAttribute="centerX" secondItem="NXW-EW-Sag" secondAttribute="centerX" id="Msb-Sp-7NG"/>
+                            <constraint firstAttribute="centerY" secondItem="NXW-EW-Sag" secondAttribute="centerY" id="N6f-ce-wb5"/>
+                            <constraint firstItem="YTn-lp-Bkz" firstAttribute="leading" secondItem="nPq-0e-ppr" secondAttribute="leadingMargin" id="cEI-oI-z8N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YTn-lp-Bkz" secondAttribute="trailing" id="jhC-ds-PhF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Gold" id="EWv-Bd-Xzk"/>
+                    <connections>
+                        <outlet property="textField" destination="YTn-lp-Bkz" id="xVJ-Xv-8cd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J7J-m8-463" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="821" y="-527"/>
+        </scene>
+        <!--Yellow-->
+        <scene sceneID="Gql-YC-pLj">
+            <objects>
+                <viewController storyboardIdentifier="YellowViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VE2-Rp-92X" customClass="YellowViewController" customModule="iOS_102" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cvg-7L-BvJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="jy0-No-vRi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5oq-Vz-meC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="label" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3u-ql-bgL">
+                                <rect key="frame" x="279" y="290" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.97160897700000004" blue="0.20513574649999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="y3u-ql-bgL" secondAttribute="centerY" id="hrE-9N-KtN"/>
+                            <constraint firstAttribute="centerX" secondItem="y3u-ql-bgL" secondAttribute="centerX" id="qT4-Hh-ikB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Yellow" id="oN7-Os-pev"/>
+                    <connections>
+                        <outlet property="label" destination="y3u-ql-bgL" id="oTN-0u-Im6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BFD-8s-TCy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1497" y="-527"/>
+        </scene>
+    </scenes>
+</document>
