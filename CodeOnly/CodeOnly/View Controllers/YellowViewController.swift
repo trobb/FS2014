@@ -54,7 +54,7 @@ class YellowViewController: UIViewController {
 	func pushNextViewController() {
 		let orangeViewController = OrangeViewController(nibName: nil, bundle: nil)
 
-		orangeViewController.stringToDisplay = textField.text
+		orangeViewController.displayLabel.text = textField.text
 
 		navigationController?.pushViewController(orangeViewController, animated: true)
 	}
