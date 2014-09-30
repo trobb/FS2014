@@ -9,18 +9,21 @@
 import UIKit
 
 class ColorTableViewCell: UITableViewCell {
+	var cellColor = UIColor.lightGrayColor()
+	@IBOutlet private var colorView:UIView?
 
-	@IBOutlet var colorView:UIView?
+	override func setHighlighted(highlighted: Bool, animated: Bool) {
+		super.setHighlighted(highlighted, animated: animated)
+		self.colorView?.backgroundColor = self.cellColor
+	}
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+	override func setSelected(selected: Bool, animated: Bool) {
+		super.setSelected(selected, animated: animated)
+		self.colorView?.backgroundColor = self.cellColor
+	}
 
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+	func setCellColor(cellColor: UIColor) {
+		self.cellColor = cellColor
+		self.colorView?.backgroundColor = self.cellColor
+	}
 }

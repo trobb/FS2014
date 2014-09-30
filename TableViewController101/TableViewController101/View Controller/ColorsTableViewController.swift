@@ -55,14 +55,6 @@ class ColorsTableViewController: UITableViewController {
 		}
 	}
 
-	override func viewWillDisappear(animated: Bool) {
-		tableView.reloadData()
-	}
-
-	override func viewWillAppear(animated: Bool) {
-		tableView.reloadData()
-	}
-
     // MARK: - Table view data source
 
 	override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -102,11 +94,10 @@ class ColorsTableViewController: UITableViewController {
 			color = UIColor.purpleColor()
 		}
 
-		cell.colorView?.backgroundColor = color
+		cell.cellColor = color
 
 		// You're done. Return the cell back to the table view.
 		println("A CELL FOR ROW \(indexPath.row)")
 		return cell
 	}
-
 }
